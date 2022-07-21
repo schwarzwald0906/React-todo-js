@@ -1,7 +1,7 @@
 import React from "react";
 
 export const InputTodo = (props) => {
-  const { todoText, onChange, onClick } = props;
+  const { todoText, onChange, onClickAdd } = props;
   return (
     <div className="input-area">
       <input
@@ -9,7 +9,7 @@ export const InputTodo = (props) => {
         value={todoText}
         onChange={onChange}
       ></input>
-      <button onClick={onClick}>追加</button>
+      <button onClick={onClickAdd}>追加</button>
     </div>
   );
 };
