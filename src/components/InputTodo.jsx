@@ -1,9 +1,17 @@
 import React from "react";
 
 export const InputTodo = (props) => {
+  const style = {
+    backgroundColor: "#c1ffff!",
+    width: "400px",
+    height: "30px",
+    padding: "8px",
+    margin: "8px",
+    borderRadius: "8px"
+  };
   const { todoText, onChange, onClickAdd } = props;
   return (
-    <div className="input-area">
+    <div style={style} className="input-area">
       <input
         placeholder="TODOを入力"
         value={todoText}
