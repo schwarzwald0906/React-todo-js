@@ -9,15 +9,18 @@ export const InputTodo = (props) => {
     margin: "8px",
     borderRadius: "8px"
   };
-  const { todoText, onChange, onClickAdd } = props;
+  const { todoText, onChange, onClickAdd, disabled } = props;
   return (
     <div style={style} className="input-area">
       <input
         placeholder="TODOを入力"
         value={todoText}
         onChange={onChange}
+        disabled={disabled}
       ></input>
-      <button onClick={onClickAdd}>追加</button>
+      <button onClick={onClickAdd} disabled={disabled}>
+        追加
+      </button>
     </div>
   );
 };
